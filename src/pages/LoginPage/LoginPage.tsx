@@ -3,12 +3,18 @@ import React, { Dispatch, useState } from 'react';
 
 import styles from './LoginPage.module.scss';
 
+import axios from 'axios';
+import { authThunks, login } from '@src/store/slices/authSlice';
+import { useDispatch } from 'react-redux';
+
 type TInputEvent = React.ChangeEvent<HTMLInputElement>;
 
 export const LoginPage:React.FC = () => {
   const [id, setId] = useState('');
   const [token, setToken] = useState('');
   const [phone, setPhone] = useState('');
+
+  const dispatch = useDispatch();
 
   const handleInput = (
     event: TInputEvent,
@@ -17,9 +23,14 @@ export const LoginPage:React.FC = () => {
     callback(event.target.value);
   };
   const handleSubmit = async() => {
-    console.log(id, token);
-    const response = await fetch(`https://api.green-api.com/waInstance${id}/GET/${token}`)
-    console.log(response);
+    const data = {
+      id,
+      token
+    }
+
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    dispatch(authThunks.login(data));
   }
 
   return (
