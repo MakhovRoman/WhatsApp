@@ -5,7 +5,8 @@ import { ROUTES } from '@src/constants';
 import { MessengerPage } from '@src/pages/MessengerPage/MessengerPage';
 import { useSelector } from 'react-redux';
 import { RootState } from '@src/store/store';
-import { AppProtectedRoute } from '../app-protected-route/AppProtectedRoute';
+import { ProtectedRoute } from '@components/protected-route/ProtectedRoute';
+import { AuthPagesRoute } from '@components/auth-pages-route/AuthPagesRoute';
 
 export const App:React.FC = () => {
   const isAuth = useSelector((state:RootState) => state.isAuth.isAuth);
@@ -13,16 +14,18 @@ export const App:React.FC = () => {
   return (
     <>
       <Routes>
-        <Route path={ROUTES.signIn.path} element={<LoginPage/>} />
+        <Route element={<AuthPagesRoute />}>
+          <Route path={ROUTES.signIn.path} element={<LoginPage/>} />
+        </Route>
         <Route path={ROUTES.messenger.path} element={
-          <AppProtectedRoute isAuth={isAuth}>
+          <ProtectedRoute isAuth={isAuth}>
             <MessengerPage/>
-          </AppProtectedRoute>
+          </ProtectedRoute>
         }/>
         <Route path='/*' element={
-          <AppProtectedRoute isAuth={isAuth}>
+          <ProtectedRoute isAuth={isAuth}>
             <MessengerPage/>
-          </AppProtectedRoute>
+          </ProtectedRoute>
         }/>
       </Routes>
     </>

@@ -3,18 +3,17 @@ import React, { Dispatch, useState } from 'react';
 
 import styles from './LoginPage.module.scss';
 
-import axios from 'axios';
-import { authThunks, login } from '@src/store/slices/authSlice';
+import { authThunks } from '@src/store/slices/authSlice';
 import { useDispatch } from 'react-redux';
+import { AppDispatch } from '@src/main';
 
 type TInputEvent = React.ChangeEvent<HTMLInputElement>;
 
 export const LoginPage:React.FC = () => {
   const [id, setId] = useState('');
   const [token, setToken] = useState('');
-  const [phone, setPhone] = useState('');
 
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
 
   const handleInput = (
     event: TInputEvent,
@@ -22,15 +21,14 @@ export const LoginPage:React.FC = () => {
   ) => {
     callback(event.target.value);
   };
+
   const handleSubmit = async() => {
-    const data = {
+    const authData = {
       id,
       token
     }
 
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    dispatch(authThunks.login(data));
+    dispatch(authThunks.login(authData));
   }
 
   return (
@@ -49,12 +47,6 @@ export const LoginPage:React.FC = () => {
           variant="outlined"
           value={token}
           onChange={(event: TInputEvent) => handleInput(event, setToken)}
-        />
-        <TextField
-          id="phoneNumber"
-          label="Phone Number"
-          variant="outlined"
-          onChange={(event: TInputEvent) => handleInput(event, setPhone)}
         />
         <Button
           variant='contained'

@@ -17,7 +17,7 @@ export const authThunks = {
     "AUTH/login",
     async (data, {dispatch}) => {
       authAPI.login(data);
-      dispatch(login(true))
+      dispatch(login())
     }
   ),
 }
@@ -26,12 +26,12 @@ export const authSlice = createSlice({
   name: 'AUTH',
   initialState: initialState,
   reducers: {
-    login: (state, action) => {
-      state.isAuth = action.payload;
+    login: (state) => {
+      state.isAuth = true;
     },
 
-    logout: (state, action) => {
-      state.isAuth = action.payload;
+    logout: (state) => {
+      state.isAuth = false;
     }
   },
   extraReducers(builder) {
@@ -40,7 +40,7 @@ export const authSlice = createSlice({
         state.isLoading = true;
       }),
       builder.addCase(authThunks.login.fulfilled, (state) => {
-        console.log('end');
+        console.log('end')
         state.isLoading = false;
       })
   },

@@ -16,3 +16,13 @@
   @extend %flex;
   flex-direction: column;
 }
+
+%flex-column-centr {
+  @extend %flex-column;
+  justify-content: center;
+}
+
+%flex-column-centr-centr {
+  @extend %flex-column-centr;
+  align-items: center;
+}

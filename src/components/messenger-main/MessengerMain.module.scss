@@ -1,0 +1,12 @@
+@import '@styles/colors';
+@import '@styles/constants';
+
+.messengerMain {
+  background-color: $messenger-main-color;
+  border-left: 1px solid rgb(49, 61, 69);
+  @extend %flex-column-centr-centr;
+}
+
+.messenger_intro {
+  color: $text-messenger-main-intro;
+}

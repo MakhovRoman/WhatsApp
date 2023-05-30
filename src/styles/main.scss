@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;700&display=swap');
+
 #root {
   background-color: lightgrey;
+  font-family: 'Inconsolata', monospace;
+}
+
+.messengerWrapper {
+  height: 100%;
+  color: white;
+}
+
+.messengerContent {
+  padding: 10px;
+  box-sizing: border-box;
 }
