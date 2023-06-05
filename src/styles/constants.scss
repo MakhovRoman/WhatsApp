@@ -7,6 +7,11 @@
   align-items: center;
 }
 
+%flex-centr-spacebetween {
+  @extend %flex-centr;
+  justify-content: space-between;
+}
+
 %flex-centr-centr {
   @extend %flex-centr;
   justify-content: center;
@@ -25,4 +30,9 @@
 %flex-column-centr-centr {
   @extend %flex-column-centr;
   align-items: center;
+}
+
+%input-style-reset {
+  border: none;
+  outline: none;
 }

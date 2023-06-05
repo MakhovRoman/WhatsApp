@@ -1,0 +1,32 @@
+@import '@styles/colors';
+
+.message {
+  &Row {
+    width: 100%;
+    min-height: 40px;
+
+    &+& {
+      margin-top: 10px;
+    }
+  }
+
+  &Item {
+    max-width: 95%;
+    width: 200px;
+    height: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+
+    &_incoming {
+      margin-right: auto;
+      background-color: $messenger-main-color;
+    }
+
+    &_outgoing {
+      margin-left: auto;
+      background-color: $message-outgoing;
+    }
+  }
+}

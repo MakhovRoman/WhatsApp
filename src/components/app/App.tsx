@@ -9,7 +9,7 @@ import { ProtectedRoute } from '@components/protected-route/ProtectedRoute';
 import { AuthPagesRoute } from '@components/auth-pages-route/AuthPagesRoute';
 
 export const App:React.FC = () => {
-  const isAuth = useSelector((state:RootState) => state.isAuth.isAuth);
+  const isAuth = useSelector((state:RootState) => state.user.isAuth);
 
   return (
     <>

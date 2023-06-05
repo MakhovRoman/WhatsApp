@@ -18,6 +18,8 @@ export default defineConfig({
   },
   define: {
     __API_ENDPOINT__: JSON.stringify(process.env.API_ENDPOINT),
+    __MY_ID_INSTANCE__: JSON.stringify(process.env.MY_ID_INSTANCE),
+    __MY_API_TOKEN_INSTANCE__: JSON.stringify(process.env.MY_API_TOKEN_INSTANCE)
   },
   plugins: [react()],
 })

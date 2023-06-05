@@ -11,7 +11,7 @@ export type TProtectedRoute = {
 }
 
 export const ProtectedRoute:React.FC<TProtectedRoute> = (props) => {
-  const isLoading = useSelector((state:RootState) => state.isAuth.isLoading)
+  const isLoading = useSelector((state:RootState) => state.user.isLoading)
 
   return (
     !props.isAuth ? (

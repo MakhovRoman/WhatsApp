@@ -1,0 +1,47 @@
+@import '@styles/constants';
+@import '@styles/colors';
+
+.searchWrapper {
+  @extend %flex-centr-centr;
+  margin: 10px 0;
+
+  & form {
+    width: 90%;
+
+    & input {
+      @extend %input-style-reset;
+      padding: 5px;
+      width: 100%;
+      box-sizing: border-box;
+      border-radius: 5px;
+      background-color: $messenger-main-color;
+
+      color: white;
+      text-indent: 20px;
+
+      background-image: url('/assets/search.svg');
+      background-position: 10px center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      &:focus {
+        background-image: none;
+
+        &::placeholder {
+          color: transparent;
+        }
+      }
+
+      &::placeholder {
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+
+  min-height: 14px;
+}

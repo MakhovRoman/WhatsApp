@@ -7,6 +7,7 @@ export const MessengerAsideHeader = () => {
       <div className={clsx(styles.imageWrapper, 'messengerContent')}>
         <img src="/assets/avatar.png" alt="avatar" />
       </div>
+      <h3>You</h3>
     </div>
   )
 }

@@ -4,7 +4,13 @@
 .messengerMain {
   background-color: $messenger-main-color;
   border-left: 1px solid rgb(49, 61, 69);
+  // padding: 20px;
+  // box-sizing: border-box;
   @extend %flex-column-centr-centr;
+
+  &_active {
+    background-color: $messenger-aside-color;
+  }
 }
 
 .messenger_intro {

@@ -1,7 +1,9 @@
 @import '@styles/colors';
+@import '@styles/constants';
 
 .messengerAsideHeader {
   background-color: $messenger-main-color;
+  @extend %flex-centr;
 }
 
 .imageWrapper {

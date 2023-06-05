@@ -6,8 +6,8 @@ import { Navigate, Outlet } from 'react-router-dom';
 import { Loader } from '@components/Loader/Loader';
 
 export const AuthPagesRoute = () => {
-  const isAuth = useSelector((state: RootState) => state.isAuth.isAuth);
-  const isLoading = useSelector((state:RootState) => state.isAuth.isLoading);
+  const isAuth = useSelector((state: RootState) => state.user.isAuth);
+  const isLoading = useSelector((state:RootState) => state.user.isLoading);
 
   return (
     isAuth ?
