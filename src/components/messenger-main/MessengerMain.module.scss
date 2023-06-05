@@ -4,6 +4,7 @@
 .messengerMain {
   background-color: $messenger-main-color;
   border-left: 1px solid rgb(49, 61, 69);
+  max-height: 100vh;
   // padding: 20px;
   // box-sizing: border-box;
   @extend %flex-column-centr-centr;
@@ -15,4 +16,11 @@
 
 .messenger_intro {
   color: $text-messenger-main-intro;
+}
+
+.messengerContent {
+  width: 100%;
+  max-height: 100%;
+
+  @extend %grid-messenger;
 }

@@ -1,7 +1,6 @@
 import { TUserData } from "@src/store/slices/authSlice"
 import styles from './MessengerChatItem.module.scss';
 import clsx from "clsx";
-import { MouseEventHandler } from "react";
 
 type TChatItemProps = {
   userData?: TUserData,

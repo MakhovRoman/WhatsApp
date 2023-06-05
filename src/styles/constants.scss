@@ -32,6 +32,13 @@
   align-items: center;
 }
 
+%grid-messenger {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 60px;
+}
+
+
 %input-style-reset {
   border: none;
   outline: none;

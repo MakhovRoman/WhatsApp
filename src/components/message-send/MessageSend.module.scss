@@ -1,0 +1,21 @@
+@import '@styles/constants';
+@import '@styles/colors';
+
+.messageSend {
+  height: 100%;
+  @extend %flex-centr-centr;
+  background-color: $messenger-main-color;
+
+  & span {
+    @extend %flex-centr;
+    padding-left: 10px;
+    height: 70%;
+    width: 70%;
+
+    border-radius: 10px;
+    outline: none;
+
+    background-color: $message-send-field;
+    color: $text-messenger-main-intro;
+  }
+}
