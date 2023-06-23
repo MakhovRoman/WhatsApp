@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import styles from './MessengerChatLIst.module.scss';
 import { RootState } from '@src/store/store';
 import { MessengerChatItem } from '../messenger-chat-item/MessengerChatItem';
-import { chatAPI } from '@src/services/API/chatAPI';
 import { useState } from 'react';
 import { chatThunks, setCurrentChat } from '@src/store/slices/chatsSlice';
 import { AddChatIdPostffics } from '@src/utils/addChatIdPreffics';
@@ -34,20 +33,20 @@ export const MessengerChatList = () => {
     }))
   }
 
-  const sendMessage = async() => {
-    const result = await chatAPI.send({
-      sendMessage: {
-        message: 'fffffff',
-        chatId: '89881039825@c.us'
-      },
-      userData: {
-        idInstance: userData.idInstance!,
-        apiTokenInstance: userData.apiTokenInstance!
-      }
-    });
+  // const sendMessage = async() => {
+  //   const result = await chatAPI.send({
+  //     sendMessage: {
+  //       message: 'fffffff',
+  //       chatId: '89881039825@c.us'
+  //     },
+  //     userData: {
+  //       idInstance: userData.idInstance!,
+  //       apiTokenInstance: userData.apiTokenInstance!
+  //     }
+  //   });
 
-    console.log(result);
-  }
+  //   console.log(result);
+  // }
 
   console.log(chatList);
 

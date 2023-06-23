@@ -1,4 +1,3 @@
-import { ChangeEvent, useState } from 'react';
 import styles from './MessengerAsideSearch.module.scss';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { addChat } from '@src/store/slices/chatsSlice';

@@ -1,18 +1,15 @@
-import { Button } from '@mui/material';
 import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
-import { Loader } from '@src/components/Loader/Loader';
 import { MessengerAside } from '@src/components/messenger-aside/MessengerAside';
 import { MessengerMain } from '@src/components/messenger-main/MessengerMain';
-import { logout } from '@src/store/slices/authSlice';
 import React from 'react';
-import { useDispatch } from 'react-redux';
+
 
 export const MessengerPage:React.FC = () => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  const handlerLogout = () => {
-    dispatch(logout());
-  }
+  // const handlerLogout = () => {
+  //   dispatch(logout());
+  // }
 
   return (
     <>

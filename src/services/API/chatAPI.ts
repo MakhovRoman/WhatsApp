@@ -1,6 +1,6 @@
 
 import { request } from "./apiRequest";
-import { ChatSendMessage, LoginRequestData, TRequestChatHistory, TDataSendMessage } from "./types";
+import { TRequestChatHistory, TDataSendMessage } from "./types";
 
 
 export const chatAPI = {
