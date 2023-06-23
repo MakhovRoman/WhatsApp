@@ -28,3 +28,7 @@ npm run dev
 - [ ] Доработать UI
 - [ ] Добавить тесты
 - [ ] Добавить Docker
+
+## Stack
+
+![My Skills](https://skillicons.dev/icons?i=html,scss,ts,react,redux,vite)
